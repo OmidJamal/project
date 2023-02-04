@@ -23,36 +23,10 @@
 
     <!--- StyleSheet CSS --->
     <link rel="stylesheet" href="CSSFile/indexstyle.css">
+    <link rel="stylesheet" href="CSSFile/owl.carousel.css">
+    <link rel="stylesheet" href="CSSFile/owl.theme.default.css">
 
-    <!-- Demo styles -->
-    <style>
-        .swiper {
-            width: 100%;
-            height: 120px;
-            padding: 30px 0;
 
-        }
-
-        .swiper-slide {
-            background: #fff;
-            height: 100%;
-            opacity: 0.6;
-        }
-
-        .swiper-slide:hover {
-            opacity: 1;
-            cursor: pointer;
-        }
-
-        .swiper-slide img {
-            width: 100%;
-            height: 90%;
-        }
-
-        .swiper-pagination-bullet {
-            color: #eb5d1e;
-        }
-    </style>
 </head>
 
 <body>
@@ -66,12 +40,14 @@
             <label style="padding:10px 0; font-weight: 700;" for="userName">نام کاربری</label>
             <div>
                 <i class="bi bi-person"></i>
-                <input class="inputForm" placeholder="نام کاربری را وارد کنید" type="text" name="userName" id="userName">
+                <input class="inputForm" placeholder="نام کاربری را وارد کنید" type="text" name="userName"
+                    id="userName">
             </div>
             <label style="padding:10px 0; font-weight: 700;" for="passWord">گذروازه</label>
             <div>
                 <i class="bi bi-lock"></i>
-                <input class="inputForm" placeholder="گذرواژه را وارد کنید" type="password" name="passWord" id="passWord">
+                <input class="inputForm" placeholder="گذرواژه را وارد کنید" type="password" name="passWord"
+                    id="passWord">
             </div>
             <a class="forget-pass" href="#">فراموشی رمز عبور؟</a>
             <input class="signup-submit" type="submit" value="وارد شوید">
@@ -666,20 +642,20 @@
             <p class="customerHeader-text">مشتریان</p>
             <p class="customerContent-text">به ما اعتماد کردند</p>
             <span class="line"></span>
-            <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="image/clients/client-1.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-2.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-3.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-4.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-5.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-6.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-7.png" alt=""></div>
-                    <div class="swiper-slide"><img src="image/clients/client-8.png" alt=""></div>
-                </div>
-                <div class="swiper-pagination"></div>
+            <!-- Slider with Rtl sowl slider -->
+            <div class="owl-carousel owl-theme">
+                <div class="item"><img src="image/clients/client-1.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-2.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-3.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-4.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-5.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-6.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-7.png" alt=""></div>
+                <div class="item"><img src="image/clients/client-8.png" alt=""></div>
             </div>
+
+
+
         </div>
     </section>
     <!--- Customer Section End--->
@@ -796,53 +772,43 @@
 
 
 
-
-
-
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
 
     <!--- Script Bootstrap CDN Link --->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    <script src="Js/mainJs.js"></script>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                500: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                },
-                640: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                },
-                768: {
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                },
-            },
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                rtl: true,
+                loop: true,
+                margin: 50,
+                
+                autoplay: true,
+                autoplayTimeout: 5000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    },
+                    1600: {
+                        items: 7
+                    }
+
+                }
+            })
         });
     </script>
+
+    <script src="Js/mainJs.js"></script>
+    <script src="Js/owl.carousel.min.js"></script>
 </body>
 
 </html>

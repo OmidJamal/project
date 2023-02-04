@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninestars</title>
+
+
+    <!--- Bootstrap CDN Link --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--- Rtl Bootstrap CDN Link --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-WJUUqfoMmnfkBLne5uxXj+na/c7sesSJ32gI7GfCk4zO4GthUKhSEGyvQ839BC51" crossorigin="anonymous">
+
+    <!--- Bootstrap Icon CDN Link --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!--- StyleSheet CSS --->
+    <link rel="stylesheet" href="CSSFile/indexstyle.css">
+
+    <!-- Demo styles -->
+    <style>
+        .swiper {
+            width: 100%;
+            height: 120px;
+            padding: 30px 0;
+
+        }
+
+        .swiper-slide {
+            background: #fff;
+            height: 100%;
+            opacity: 0.6;
+        }
+
+        .swiper-slide:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 90%;
+        }
+
+        .swiper-pagination-bullet {
+            color: #eb5d1e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal-a"></div>
+    <!-- sign UP  -->
+    <div class="signUp">
+        <a href="javascript:"><i class="bi bi-x-circle-fill closeBtn"></i></a>
+        <h1>وارد شوید</h1>
+        <i class="bi bi-person-circle profile"></i>
+        <form class="signup-form" action="#">
+            <label style="padding:10px 0; font-weight: 700;" for="userName">نام کاربری</label>
+            <div>
+                <i class="bi bi-person"></i>
+                <input class="inputForm" placeholder="نام کاربری را وارد کنید" type="text" name="userName" id="userName">
+            </div>
+            <label style="padding:10px 0; font-weight: 700;" for="passWord">گذروازه</label>
+            <div>
+                <i class="bi bi-lock"></i>
+                <input class="inputForm" placeholder="گذرواژه را وارد کنید" type="password" name="passWord" id="passWord">
+            </div>
+            <a class="forget-pass" href="#">فراموشی رمز عبور؟</a>
+            <input class="signup-submit" type="submit" value="وارد شوید">
+        </form>
+        <div class="socialSignUp">
+            <p>راه های ثبت نام</p>
+            <div class="socialItems">
+                <a href=""><i style="color: rgb(2, 0, 148)" class="bi bi-facebook"></i></a>
+                <a href=""><i style="color: rgb(0, 119, 255);" class="bi bi-twitter"></i></a>
+                <a href=""><i style="color: rgb(207, 1, 1);" class="bi bi-google"></i></a>
+            </div>
+        </div>
+        <div class="emailSignUp">
+            <p>ثبت نام با ایمل</p>
+            <a href="">ثبت نام</a>
+        </div>
+    </div>
+
+
+
+    <div id="topBtn">
+        <a href="javaScript:"><i class="bi bi-arrow-up-circle-fill"></i></a>
+    </div>
+    <!--- Header Navigation Start - Creat by Bootstrap 5 --->
+    <header id="header">
+        <nav class="navbar navbar-expand-xl navBar">
+            <div class="container-fluid navBarContainer">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navBar-content" id="navbarNavDropdown">
+                    <ul class="navbar-nav navBar-ul">
+                        <li class="nav-item">
+                            <a class="nav-link startBtn" aria-current="page" href="#">شروع کنید</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-a active-a" href="index.html">خانه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-a" href="about-us.html">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-a" href="#offer">سرویس ها</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-a" href="#sample">نمونه کار</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-a dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                دراپ دون
+                            </a>
+                            <ul class="dropdown-menu dropDown">
+                                <li><a class="dropdown-item nav-a" href="#">دراپ دون1</a></li>
+                                <li><a class="dropdown-item nav-a" href="#">دراپ دون 2</a></li>
+                                <li><a class="dropdown-item nav-a" href="#">دراپ دون 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-a" href="contact-us.html">تماس با ما</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logo">
+                    NineStar
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--- Header End--->
+
+    <!--- Hero Section Start --->
+    <section id="hero">
+        <div class="heroContainer col-xs-11 col-sm-11 ">
+            <div class="imageContent col-xs-12 col-sm-12 col-lg-6">
+                <img class="heroImg" src="image/hero-img.svg" alt="">
+            </div>
+            <div class="textContent col-xs-12 col-sm-12 col-lg-6">
+                <h1>تجربه دیجیتالی بهتر و زیباتر با<br> ناین استارز</h1>
+                <h2>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است.
+                </h2>
+                <button class="heroBtn">امتحان کنید</button>
+            </div>
+        </div>
+    </section>
+    <!--- Hero Section End --->
+
+    <!--- Main Section Start --->
+    <section id="mainSection">
+        <div class="mainContainer col-xs-11">
+            <div class="mainImg col-xs-12 col-sm-12 col-lg-6">
+                <img src="image/about-img.svg" alt="">
+            </div>
+            <div class="mainTex col-xs-12 col-sm-12 col-lg-6">
+                <h1>آنها با ارزش ترین لذت را ارائه<br> می دهند</h1>
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+                    چاپگرها و
+                    متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+                </p>
+                <div class="rowText">
+                    <div class="rowItems col-xs-12 col-sm-12 col-md-6">
+                        <i class="bi bi-coin"></i>
+                        <h4>ساخت کوین در بلاکچین</h4>
+                        <p>ساخت یک کوین از آنجا که باید بلاکچین اختصاصی پیاده‌سازی کنید، فرآیندی زمان‌بر خواهد بود.
+                        </p>
+                    </div>
+                    <div class="rowItems col-xs-12 col-sm-12 col-md-6">
+                        <i class="bi bi-file-text"></i>
+                        <h4> امضا دیجیتالی در بلاک چین</h4>
+                        <p>امضای دیجیتالی روشی است که در آن با استفاده طرح‌های ریاضی و الگوریتم‌ها .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Main Section End--->
+
+    <!--- Offer Section Start --->
+    <section id="offer">
+        <div class="offerContainer col-xs-12 col-sm-11">
+            <div class="offerHeader-text">
+                <p>پیشنهادات</p>
+            </div>
+            <div class="offerContent-text">
+                <p>خدمات عالی را که ما ارائه می دهیم بررسی کنید</p>
+            </div>
+            <span class="line"></span>
+            <div class="rowcontainer">
+                <div class="rowContent col-xs-12">
+                    <i class="bi bi-amd"></i>
+                    <h3>گرافیک AMD</h3>
+                    <p>واحد پردازش گرافیکی در پی همبستگی با اپلیکیشن‌های نرم‌افزاری، اطلاعاتی دربارهٔ یک فرتور را به
+                        کارت گرافیک می‌فرستد</p>
+                </div>
+                <div class="rowContent col-xs-12">
+                    <i class="bi bi-speedometer2"></i>
+                    <h3>اینترنت پر سرعت</h3>
+                    <p>با این سرویس شما می‌توانید اینترنتی با استاندارد جهانی در خانه خود داشته باشید. به سادگی
+                        استریم
+                        کنید .</p>
+                </div>
+                <div class="rowContent col-xs-12">
+                    <i class="bi bi-globe-americas"></i>
+                    <h3>زمین دیجیتالی</h3>
+                    <p>یک زمین دیجیتالی که در محیط آنلاین و دنیای مجازی «دی سنترالند» واقع شده و قرار است در آینده
+                        به
+                    </p>
+                </div>
+                <div class="rowContent col-xs-12">
+                    <i class="bi bi-cloud-arrow-up-fill"></i>
+                    <h3>فضای ابری</h3>
+                    <p>یک بستر امن با پایداری بسیار بالا برای ذخیره سازی اطلاعات و داده‌های کاربران می‌باشد که از هر
+                        نقطه از کره خاکی </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--- Offer Section End--->
+
+    <!--- sample Section Start --->
+    <section id="sample">
+        <div class="sampleContainer col-xs-12 col-sm-11">
+            <p class="sampleHeader-text">نمونه ها</p>
+            <p class="sampleContent-text">نمونه کارهای زیبای ما را ببینید</p>
+            <span class="line"></span>
+            <div class="selectContent">
+                <a href="#">Web</a>
+                <a href="#">Card</a>
+                <a href="#">App</a>
+                <a class="active" href="#">All</a>
+            </div>
+            <div class="sampleimg">
+                <!---- 1 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-1.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-1.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>App1</h3>
+                            <p>App</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 2 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-2.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-2.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Web3</h3>
+                            <p>Web</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 3 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-3.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-3.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>App2</h3>
+                            <p>App</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 4 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-4.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-4.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Card2</h3>
+                            <p>Card</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 5 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-5.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-5.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Web2</h3>
+                            <p>Web</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 6 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-6.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-6.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>App3</h3>
+                            <p>App</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 7 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-7.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-7.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Card1</h3>
+                            <p>Card</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 8 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-8.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-8.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Card3</h3>
+                            <p>Card</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!---- 9 ---->
+                <div class="imageItems col-xs-12">
+                    <img class="image" src="image/portfolio/portfolio-9.jpg" alt="#">
+                    <div class="overlay">
+                    </div>
+                    <div class="middleLode">
+                        <div class="link">
+                            <a href="#">
+                                <i class="bi bi-link"></i>
+                            </a>
+                        </div>
+                        <div class="link">
+                            <a href="image/portfolio/portfolio-9.jpg">
+                                <i class="bi bi-plus-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="text">
+                            <h3>Web3</h3>
+                            <p>Web</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--- sample Section End --->
+    <!--- Faq Section Start --->
+    <section id="Faq">
+        <div class="faqConrianer">
+            <div class="textContainer">
+                <div class="faqHeader-text">
+                    <p>پیشنهادات</p>
+                </div>
+                <div class="faqContent-text">
+                    <p>خدمات عالی را که ما ارائه می دهیم بررسی کنید</p>
+                </div>
+                <div class="line">
+                    <div class="line1"></div>
+                </div>
+            </div>
+            <div class="faqContent">
+                <div class="faq-q">
+                    <h5> چرا به روز رسانی نرم افزار ضروری است؟ </h5>
+                </div>
+                <div class="faq-a">
+                    <p style="text-align: justify;">مایکروسافت متعهد است نرم افزاری را به مشتریان خود ارائه دهد
+                        که از نظر ایمنی و امنیت
+                        آزمایش
+                        شده است. اگرچه هیچ سیستمی کاملاً ایمن نیست، ما از فرآیندها، فناوری و چندین تیم متمرکز
+                        ویژه
+                        برای بررسی، تعمیر، استفاده می‌کنیم.
+                        مایکروسافت متعهد است نرم افزاری را به مشتریان خود ارائه دهد
+                        که از نظر ایمنی و امنیت
+                        آزمایش
+                        شده است. اگرچه هیچ سیستمی کاملاً ایمن نیست، ما از فرآیندها، فناوری و چندین تیم متمرکز
+                        ویژه
+                        برای بررسی، تعمیر، استفاده می‌کنیم.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="faqContent">
+                <div class="faq-q">
+                    <h5> چگونه نرم افزار های دانلود شده را نصب کنیم؟ </h5>
+                </div>
+                <div class="faq-a">
+                    <p style="text-align: justify;">قبل از اینکه بتوانید از هر نرم افزاری که دانلود می کنید
+                        استفاده کنید، باید آن را نصب
+                        کنید. به
+                        عنوان مثال، اگر یک به روز رسانی امنیتی را دانلود کنید اما آن را نصب نکنید، به روز رسانی
+                        انجام نمی شود.
+                        قبل از اینکه بتوانید از هر نرم افزاری که دانلود می کنید
+                        استفاده کنید، باید آن را نصب
+                        کنید. به
+                        عنوان مثال، اگر یک به روز رسانی امنیتی را دانلود کنید اما آن را نصب نکنید، به روز رسانی
+                        انجام نمی شود.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="faqContent">
+                <div class="faq-q">
+                    <h5> چگونه میتوانیم نرم افزار خود را به روز نگه داریم؟ </h5>
+                </div>
+                <div class="faq-a">
+                    <p style="text-align: justify;">مایکروسافت طیف وسیعی از خدمات آنلاین . Windows Update به روز
+                        رسانی هایی را پیدا می کند که
+                        ممکن است حتی از آنها اطلاعی نداشته باشید و ساده ترین راه را برای نصب به روز رسانی هایی
+                        در
+                        اختیار شما قرار می دهد که به جلوگیری یا رفع مشکلات کمک می کند.
+                        >اگر نمی توانید دانلود را کامل کنید، ممکن است لازم باشد کش را
+                        در Windows Internet Explorer
+                        پاک
+                        کنید، همانطور که در مراحل زیر توضیح داده شده است. توجه داشته باشید که بسته به نسخه
+                        اینترنت
+                        اکسپلورر که نصب کرده اید، این روش کمی متفاوت خواهد بود.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="faqContent">
+                <div class="faq-q">
+                    <h5> اگر نتوانیم دانلود را کامل کنیم چه کار باید کرد؟ </h5>
+                </div>
+                <div class="faq-a">
+                    <p style="text-align: justify;">اگر نمی توانید دانلود را کامل کنید، ممکن است لازم باشد کش را
+                        در Windows Internet Explorer
+                        پاک
+                        کنید، همانطور که در مراحل زیر توضیح داده شده است. توجه داشته باشید که بسته به نسخه
+                        اینترنت
+                        اکسپلورر که نصب کرده اید، این روش کمی متفاوت خواهد بود.
+                        اگر نمی توانید دانلود را کامل کنید، ممکن است لازم باشد کش را
+                        در Windows Internet Explorer
+                        پاک
+                        کنید، همانطور که در مراحل زیر توضیح داده شده است. توجه داشته باشید که بسته به نسخه
+                        اینترنت
+                        اکسپلورر که نصب کرده اید، این روش کمی متفاوت خواهد بود.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="faqContent">
+                <div class="faq-q">
+                    <h5> اگر چیزی را که به دنبالش هستم پیدا نکرده چه باید کرد؟ </h5>
+                </div>
+                <div class="faq-a">
+                    <p style="text-align: justify;">اگر نمی‌توانید دانلود خاصی را پیدا کنید، ممکن است از شرکتی
+                        غیر از مایکروسافت در دسترس
+                        باشد.
+                        نمونه‌های معروف عبارتند از Adobe Reader، Macromedia Shockwave و Flash Player و نرم‌افزار
+                        جاوا. برای پیوندهای فعلی به این دانلودها در وب‌سایت مربوطه خود، از Bing برای جستجو
+                        استفاده
+                        کنید. وب برای دانلودی که به دنبال آن هستید. اگر مطمئن هستید که دانلود خاصی از مایکروسافت
+                        است
+                        و نمی توانید دانلود را در مرکز دانلود یا از طریق سرویس های به روز رسانی خودکار ما پیدا
+                        کنید،
+                        لطفاً
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--- Faq Section End --->
+
+    <!--- Team Section Start --->
+    <section id="team">
+        <div class="teamContainer col-xs-12 col-sm-10">
+            <p class="teamHeader-text">ستاره ها</p>
+            <p class="teamContent-text">بهترین ها در حوزه نرم افزار را بشناسید</p>
+            <span class="line"></span>
+            <div class="teamContent">
+                <div class="teamItems">
+                    <img src="image/team/1_600x600.jpg" alt="#">
+                    <div class="teamOverlay">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <div class="teamDetail">
+                        <h5>Richard Hendricks</h5>
+                        <p>CEO</p>
+                    </div>
+                </div>
+                <div class="teamItems">
+                    <img src="image/team/2_600x600.jpg" alt="#">
+                    <div class="teamOverlay">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <div class="teamDetail">
+                        <h5>Bertram Gilfoyle</h5>
+                        <p>Network Administrator</p>
+                    </div>
+                </div>
+                <div class="teamItems">
+                    <img src="image/team/3_600x600.jpg" alt="#">
+                    <div class="teamOverlay">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <div class="teamDetail">
+                        <h5>Dinesh Chugtai</h5>
+                        <p>Programmer</p>
+                    </div>
+                </div>
+                <div class="teamItems">
+                    <img src="image/team/4_600x600.jpg" alt="#">
+                    <div class="teamOverlay">
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <div class="teamDetail">
+                        <h5>Donald "Jared" Dunn</h5>
+                        <p>Program manager</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--- Team Section End --->
+
+    <!--- Customer Section Start--->
+    <section id="customer">
+        <div class="customerContainer">
+            <p class="customerHeader-text">مشتریان</p>
+            <p class="customerContent-text">به ما اعتماد کردند</p>
+            <span class="line"></span>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="image/clients/client-1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image/clients/client-8.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!--- Customer Section End--->
+
+    <!--- Search Section Start --->
+    <section id="search">
+        <div class="searchContainer col-xs-11 col-sm-11 col-lg-10">
+            <div class="searchHeader-text">
+                <p>جستوجو در سایت</p>
+            </div>
+            <div class="searchContent-text">
+                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                    طراحان </p>
+            </div>
+            <form action="#" class="searchContent col-xs-12 col-sm-12 col-lg-6">
+                <input type="text" class="searchInput">
+                <input type="submit" class="submitBtn">
+            </form>
+        </div>
+    </section>
+    <!--- Search Section End --->
+
+    <!--- Footer Start --->
+    <footer id="footer">
+        <!-- footer Container creat with bootstrap -->
+        <div class="container pt-5">
+            <!-- row start -->
+            <div class="row">
+                <div class="rowCard col-xs-12 col-md-6 col-lg-3">
+                    <h3>NineStars</h3>
+                    <p>شهر مشهد </p>
+                    <p>خیابان شریعتی</p>
+                    <p>شریعتی 59</p>
+                    <div class="Num">
+                        <div class=" numItems phoneNum">
+                            <p style="font-weight: 900; padding-left: 5px;">تلفن:</p>
+                            <p>09123456789</p>
+                        </div>
+                        <div class="numItems emailNum">
+                            <p style="font-weight: 900; padding-left: 5px;">ایمیل:</p>
+                            <p>workout.oj@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rowCard col-xs-12 col-md-6 col-lg-3">
+                    <h6 style="font-weight: 900;">لینک های مفید</h6>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">خانه</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">درباره ما</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">سرویس ها</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">شرایط استفاده از خدمات</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">قوانین</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rowCard col-xs-12 col-md-6 col-lg-3">
+                    <h6 style="font-weight: 900;">خدمات ما</h6>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">طراحی سایت</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">توسعه وب</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">مدیریت تولید</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">بازار یابی</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-left" style="font-size: smaller; color: #eb5d1e;"></i>
+                            <a href="#">طراحی گرافیک</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rowCard col-xs-12 col-md-6 col-lg-3">
+                    <h6 style="font-weight: 900; padding-bottom: 10px;">شبکه های اجتماعی ما</h6>
+                    <p>ما در این شبکه های اجتماعی منتظر حمایت های گرم شما هستیم</p>
+                    <div class="social">
+                        <i class="bi bi-telegram"></i>
+                        <i class="bi bi-skype"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div style="text-align: center;">made with **STFU** by Just Do It</div>
+    </footer>
+    <!--- Footer Start --->
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+    <!--- Script Bootstrap CDN Link --->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <script src="Js/mainJs.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                500: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

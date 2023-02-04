@@ -10,28 +10,53 @@ $(document).ready(function () {
     });
 
     // for sign Up input 
-    $('.signup-form > div').click(function(){
+    $('.signup-form > div').click(function () {
         $(this).css({
-            "borderBottom":"1px solid #eb5d1e"
+            "borderBottom": "1px solid #eb5d1e"
         })
     });
 
     //for when clicked starts open signUp and modal
 
-    $('.nav-item .startBtn').click(function(){
+    $('.nav-item .startBtn').click(function () {
         $('.signUp , .modal-a').css({
-            'display':'flex',
-            'transition':'all .5s ease'
+            'display': 'flex',
+            'transition': 'all .5s ease'
         })
     });
 
     // for wen click close Button of sgin up 
 
-    $('.signUp .closeBtn , .modal-a ').click(function(){
+    $('.signUp .closeBtn , .modal-a ').click(function () {
         $('.signUp , .modal-a').css({
-            'display':'none'
+            'display': 'none'
         })
     });
+
+    // for rtl owl slider in customer section
+    $('.owl-carousel').owlCarousel({
+        rtl: true,
+        loop: true,
+        margin: 50,
+
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            },
+            1600: {
+                items: 7
+            }
+
+        }
+    })
 });
 //...................................................................
 
